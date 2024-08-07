@@ -7,3 +7,10 @@
 .heading{
     text-align: center;
 }
+
+.category-name::first-letter{
+    text-transform: uppercase;
+}
+.dropdown-item::first-letter{
+    text-transform: uppercase;
+}
