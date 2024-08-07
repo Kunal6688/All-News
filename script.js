@@ -1,23 +1,25 @@
-const apiUrl = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=f34b69de2c7c4686a6c51d0ad286543c";
+const apiUrl = "https://inshortsapi.vercel.app/news?category=sports";
 
 async function setValue() {
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        const articles = data.articles;
+        const articles = data.data;
         const container = $("#news-container");
 
-        // container.empty();   
+        // container.empty();  
+        
+        console.log(articles);
 
         articles.forEach(article => {
             const cardHtml = `
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="${article.urlToImage}" class="card-img-top" alt="${article.title}">
+                        <img src="${article.imageUrl}" class="card-img-top" alt="${article.title}">
                         <div class="card-body">
                             <h5 class="card-title">${article.title}</h5>
-                            <p class="card-text">${article.description}</p>
-                            <a href="${article.url}" class="btn btn-primary">Read More</a>
+                            <p class="card-text">${article.content}</p>
+                            <a href="${article.readMoreUrl}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
