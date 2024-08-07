@@ -47,6 +47,27 @@ const apiUrl = `https://inshortsapi.vercel.app/news?category=national`;
 
 
 
+
+$(".home").on("click",function(){
+    console.log("hello");
+    location.reload;
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $('.dropdown-item').on('click', function(event) {
     event.preventDefault();
     var selectedCategory = $(this).text();
