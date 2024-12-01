@@ -1,5 +1,5 @@
 
-const apiUrl = `https://inshortsapi.vercel.app/news?category=national`;
+const apiUrl = `https://inshorts.deta.dev/news?category=national`;
 
     async function setValue() {
         try {
