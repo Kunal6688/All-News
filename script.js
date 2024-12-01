@@ -1,5 +1,5 @@
 
-const apiUrl = `https://inshorts.deta.dev/news?category=national`;
+const apiUrl = `https://google-news13.p.rapidapi.com/business?lr=en-US`;
 
     async function setValue() {
         try {
@@ -77,7 +77,7 @@ $('.dropdown-item').on('click', function(event) {
     $(".category-name").text(selectedCategory);
     
 
-    const apiUrl = `https://inshortsapi.vercel.app/news?category=${selectedCategory}`;
+    const apiUrl = `https://google-news13.p.rapidapi.com/${selectedCategory}?lr=en-US`;
 
     async function setValue() {
         try {
